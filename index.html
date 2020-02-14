@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Ba Dum Tss!</title>	
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Open+Sans&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">	
+</head>
+
+<body>
+
+
+	<div id="drumMachineContainer" class="goldBorder container">
+		<div class="row">
+			<div class="col-md-6" id="keypad-container">
+				<div class="container">
+					<div class="row">
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">Q</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">W</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">E</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col"><div class= "keypad-letters" onclick="soundDrum(this.innerText)">A</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">S</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">D</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">Z</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">X</div>
+						</div>
+						<div class="col"><div class="keypad-letters" onclick="soundDrum(this.innerText)">C</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="col-md-6" id="controls-container">
+
+				<h2>Power</h2>
+				<div id="power-switch" class="row" onclick="togglePower()">
+					<div class="col" id="on-switch">on
+					</div>
+					<div class="col" id="off-switch">off
+					</div>
+				</div>
+				
+				<div class="container" id="sound-name-container">
+				</div>
+				
+				<div id="slider-container" class="container">
+				<input type="range" min="0" max="100" id="volume-slider" value="50" step="1" oninput="changeVolume(this.value)">
+				</div>
+				
+				
+				<h2>Bank</h2>
+				<div id="bank-switch" class="row" onclick="toggleBank()">
+					<div class="col" id="bank1-switch">1
+					</div>
+					<div class="col" id="bank2-switch">2
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<h4 class="fixed-bottom" id="signature">created by Sophie Tsai.</h4>
+</body>
+
+<script src="drums.js"></script>
+</html>
